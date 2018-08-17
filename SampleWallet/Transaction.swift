@@ -129,7 +129,7 @@ extension CodableTx {
     func messages() -> [String] {
         let messagesSubstring: [Substring] = outputs
             .map { $0.scriptPubKey.hex }
-            .filter { $0.prefix(4) == "6a0e" }
+            .filter { $0.prefix(2) == "6a" }
             .map { $0[$0.index($0.startIndex, offsetBy: 4)...]}
         
         let messages = messagesSubstring
@@ -141,5 +141,5 @@ extension CodableTx {
 }
 
 struct SentResponse: Codable {
-    let txid: String
+    let txid: String?
 }
