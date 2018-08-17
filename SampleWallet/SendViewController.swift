@@ -14,6 +14,9 @@ class SendViewController: UIViewController {
     @IBAction func
         sendButtonTapped(_ sender: Any) {
         // 送金をする
+        // AddressFactoryでString型のアドレスをAddress型に変換してくれます
+        let address: Address = try! AddressFactory.create("bchtest:qpytf7xczxf2mxa3gd6s30rthpts0tmtgyw8ud2sy3")
+        sendCoins(toAddress: address, amount: 300)
     }
     
     override func viewDidLoad() {
@@ -64,6 +67,8 @@ class SendViewController: UIViewController {
         let lockScriptChange = Script(address: changeAddress)!
         
         // 上のBitcoin Scriptを自分で書いてみよー！
+        
+        // OP_RETURNのOutputを作成する
         
         let toOutput = TransactionOutput(value: amount, lockingScript: lockScriptTo.data)
         let changeOutput = TransactionOutput(value: change, lockingScript: lockScriptChange.data)
