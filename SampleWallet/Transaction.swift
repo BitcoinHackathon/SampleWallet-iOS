@@ -139,3 +139,7 @@ extension CodableTx {
         return messages
     }
 }
+
+struct SentResponse: Codable {
+    let txid: String
+}

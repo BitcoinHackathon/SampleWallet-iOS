@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C26AA282126901F00170732 /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C26AA272126901F00170732 /* TransactionDetail.swift */; };
 		0CC1AD7221266D750008BFAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1AD7121266D750008BFAF /* AppDelegate.swift */; };
 		0CC1AD7421266D750008BFAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1AD7321266D750008BFAF /* HomeViewController.swift */; };
 		0CC1AD7721266D750008BFAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1AD7521266D750008BFAF /* Main.storyboard */; };
@@ -23,7 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C26AA272126901F00170732 /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetail.swift; sourceTree = "<group>"; };
 		0CC1AD6E21266D750008BFAF /* SampleWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC1AD7121266D750008BFAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CC1AD7321266D750008BFAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				0CC1AD83212674850008BFAF /* APIClient.swift */,
 				0CC1AD85212674E50008BFAF /* Transaction.swift */,
 				0CC1AD872126751D0008BFAF /* UnspentOutput.swift */,
-				0C26AA272126901F00170732 /* TransactionDetail.swift */,
 				0CC1AD8E2126764B0008BFAF /* Extension.swift */,
 				0CC1AD7521266D750008BFAF /* Main.storyboard */,
 				0CC1AD7821266D760008BFAF /* Assets.xcassets */,
@@ -225,7 +222,6 @@
 			files = (
 				0CC1AD7421266D750008BFAF /* HomeViewController.swift in Sources */,
 				0CC1AD882126751D0008BFAF /* UnspentOutput.swift in Sources */,
-				0C26AA282126901F00170732 /* TransactionDetail.swift in Sources */,
 				0CC1AD7221266D750008BFAF /* AppDelegate.swift in Sources */,
 				0CC1AD86212674E50008BFAF /* Transaction.swift in Sources */,
 				0CC1AD84212674850008BFAF /* APIClient.swift in Sources */,
