@@ -63,10 +63,11 @@ class SendViewController: UIViewController {
         let lockScriptTo = Script(address: toAddress)
         let lockScriptChange = Script(address: changeAddress)
         
+        // 上のBitcoin Scriptを自分で書いてみよー！
+        
+        
         let toOutput = TransactionOutput(value: amount, lockingScript: lockScriptTo!.data)
         let changeOutput = TransactionOutput(value: change, lockingScript: lockScriptChange!.data)
-        
-        // 上のBitcoin Scriptを自分で書いてみよー！
         
         // 5. UTXOとTransactionOutputを合わせて、UnsignedTransactionを作る
         let unsignedInputs = utxos.map { TransactionInput(previousOutput: $0.outpoint, signatureScript: Data(), sequence: UInt32.max) }
@@ -96,6 +97,7 @@ class SendViewController: UIViewController {
             let txin = inputsToSign[i]
             let pubkey = key.publicKey()
             
+            // unlockScriptを作る
             let unlockingScript = Script.buildPublicKeyUnlockingScript(signature: signature, pubkey: pubkey, hashType: hashType)
             
             // TODO: sequenceの更新
