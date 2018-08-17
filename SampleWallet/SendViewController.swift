@@ -68,7 +68,7 @@ class SendViewController: UIViewController {
         
         // OP_RETURNのOutputを作成する
         
-        // OP_CLTVのOutputを作成する
+        // OP_CLTVのOutputを作成する    
         
         let toOutput = TransactionOutput(value: amount, lockingScript: lockScriptTo.data)
         let changeOutput = TransactionOutput(value: change, lockingScript: lockScriptChange.data)

@@ -14,7 +14,7 @@ class APIClient {
     private let apiEndPoint = "https://test-bch-insight.bitpay.com/api" // Mainnet: "https://bch-insight.bitpay.com/api"
     func getUnspentOutputs(withAddresses addresses: [String], completionHandler: @escaping ([UnspentOutput]) -> ()) {
         let paramAddrs = addresses.joined(separator: ",")
-        let url = "\(apiEndPoint)/addrs/\(paramAddrs)/utxo"
+        let url = "\(apiEndPoint)/addrs/pqj7k4y33w4fdwtrhk73kzzds4cyc5wxlq9avyqd4h/utxo"
         print("get unspent outputs url = \(url)")
         get(url: url, completion: { (data) in
             do {
