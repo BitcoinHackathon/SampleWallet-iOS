@@ -61,8 +61,7 @@ class APIClient {
                 return
             }
             do {
-                print(data.hex)
-                let tx = try JSONDecoder().decode(SentResponse.self, from: data)
+                let tx = try JSONDecoder().decode(TransactionDetail.self, from: data)
                 completionHandler(tx.txid, nil)
             } catch {
                 print("Serialize Error")

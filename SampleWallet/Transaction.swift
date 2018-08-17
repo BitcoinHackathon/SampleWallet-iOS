@@ -140,6 +140,19 @@ extension CodableTx {
     }
 }
 
-struct SentResponse: Codable {
-    let txid: String?
+struct TransactionDetail: Codable {
+    
+    let txid: String
+    let address: String?
+    let index: Int?
+    let satoshi: Int64?
+    let inputTxs: [TransactionDetail]?
+    
+    enum CodingKeys: String, CodingKey {
+        case txid
+        case address = "addr"
+        case index = "n"
+        case satoshi = "valueSat"
+        case inputTxs = "vin"
+    }
 }
