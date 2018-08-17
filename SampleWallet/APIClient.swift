@@ -82,7 +82,6 @@ class APIClient {
             print("cannot create url")
             return
         }
-        print("url \(url)")
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {
