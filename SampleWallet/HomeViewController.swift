@@ -39,7 +39,7 @@ class HomeViewController: UITableViewController {
     
     private func updateUI() {
         getAddress()
-        //getBalance
+        //getBalance()
         //getTxHistory()
     }
     
