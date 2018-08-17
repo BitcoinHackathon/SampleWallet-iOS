@@ -67,7 +67,6 @@ class HomeViewController: UITableViewController {
     private func getTxHistory() {
         APIClient().getTransaction(withAddresses: AppController.shared.wallet!.publicKey.toLegacy().description, completionHandler: { [weak self] (transactrions:[CodableTx]) in
             self?.transactions = transactrions
-            DispatchQueue.main.async { self?.getBalance() }
             DispatchQueue.main.async { self?.tableView.reloadData() }
         })
     }
