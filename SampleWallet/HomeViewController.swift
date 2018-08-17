@@ -56,7 +56,7 @@ class HomeViewController: UITableViewController {
     }
     
     // 残高を確認する
-    private func updateBalance() {
+    private func getBalance() {
         APIClient().getUnspentOutputs(withAddresses: [AppController.shared.wallet!.publicKey.toLegacy().description], completionHandler: { [weak self] (utxos: [UnspentOutput]) in
             let balance = utxos.reduce(0) { $0 + $1.amount }
             DispatchQueue.main.async { self?.balanceLabel.text = "\(balance) tBCH" }
